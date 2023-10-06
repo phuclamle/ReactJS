@@ -40,17 +40,16 @@
             </tr>
         </tbody>
     </table>
-
     <script>
-        // khi trang được load lên
         window.onload = function(){
-            let buttonList = document.getElementsByTagName('button')
+            let buttonList = document.getElementsByTagName("button");
             console.log(buttonList);
             for(let button of buttonList){
-                button.addEventListener('click', function(){
-                    // console.log(this.parentElement.parentElement);
+                button.addEventListener("click",function(){
                     this.parentElement.parentElement.remove()
-                })
+                }
+            
+                )
             }
         }
     </script>
