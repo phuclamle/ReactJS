@@ -37,7 +37,7 @@ class TaskManager{
         this.taskList = this.taskList.filter((task) => task.id != taskId);
      }
 }
-
+  
 TaskManager.addTask(new Task(1,"Bug fix 1"))
 TaskManager.addTask(new Task(2,"Bug fix 2"))
 TaskManager.addTask(new Task(3,"Bug fix 3"))

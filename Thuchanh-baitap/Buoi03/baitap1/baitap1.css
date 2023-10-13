@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+.action{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.search{
+    padding: 5px;
+}
+.search-btn{
+    background-color: lightgray;
+    cursor: pointer;
+    transition: .5s;
+}
+.search-btn:hover{
+    border: 1px blue;
+    background-color: black;
+    color: white;
+}
+.remove{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    transition: .5s;
+    border-radius: 1px;
+}
+.remove:hover{
+    color: black;
+}
+#img-giphy{
+    height: 200px;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
