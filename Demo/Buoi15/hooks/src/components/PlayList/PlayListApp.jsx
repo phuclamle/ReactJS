@@ -52,7 +52,7 @@ function PlayListApp(){
         setPlaylist(playlist)
         setselectIndex(-1)
         // setShowAlert(true)
-        toast.info('Music updated success',{position:'bottom-right',theme:'dark'})
+        toast.info('Music updated success',{position:'bottom-right',theme:'dark '})
     }
 
     console.log(playlist);
@@ -79,13 +79,13 @@ function PlayListApp(){
         <div className="w-50 mt-3">
             <ul className="list-group">
                 {
-                    playlist.map((music,index)=>(
+                    playlist.map((song,index)=>(
                         <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
                     {
                         selectIndex == index ? 
-                        <input className="form-control" value={newMusic || music}
+                        <input className="form-control" value={newMusic||song}
                         onInput={(e)=>setNewMusic(e.target.value)}
-                        /> : music 
+                        /> : song 
                     }
                     <div className="d-flex ">
                        {
@@ -111,7 +111,7 @@ function PlayListApp(){
                      </span>
                      <span className="d-inline-block" data-bs-toggle="tooltip" title="remove">
                      <i role="button" className="fa-solid fa-trash text-danger"
-                      onClick={()=>handleRemoveMusic(index,music)}
+                      onClick={()=>handleRemoveMusic(index,song)}
                      /> 
                      </span>
                    
