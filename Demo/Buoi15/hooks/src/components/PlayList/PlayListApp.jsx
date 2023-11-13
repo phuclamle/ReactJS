@@ -83,7 +83,7 @@ function PlayListApp(){
                         <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
                     {
                         selectIndex == index ? 
-                        <input className="form-control" value={newMusic||song}
+                        <input className="form-control" value={newMusic}
                         onInput={(e)=>setNewMusic(e.target.value)}
                         /> : song 
                     }
@@ -106,7 +106,10 @@ function PlayListApp(){
                              {/* role = button -> rê chuột vào sẽ hiện bàn tay ra */}
                         <span className="d-inline-block" data-bs-toggle="tooltip" title="edit">
                     <i role="button" className="fa-solid fa-pen-to-square text-success me-2" 
-                    onClick={()=>setselectIndex(index)}
+                    onClick={()=>{
+                        setselectIndex(index)
+                        setNewMusic(playlist[index])
+                    }}
                     /> 
                      </span>
                      <span className="d-inline-block" data-bs-toggle="tooltip" title="remove">
