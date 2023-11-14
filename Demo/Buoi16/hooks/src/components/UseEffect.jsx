@@ -7,6 +7,7 @@ import React, {useState,useEffect} from "react";
 // -callback sẽ được gọi lại mỗi khi cập nhật state (setState)
 // 2.useEffect(callback,[])
 // 3.useEffect(callback,[deps])
+// -callback sẽ được gọi lại khi [deps] thay đổi
 // --
 // Chức năng: side effects (những tác động bên cạnh)
 // call API
@@ -20,6 +21,10 @@ import React, {useState,useEffect} from "react";
 // Nguyên tắc chung:
 // 1. callback luôn được gọi khi component được mounted vào DOM
 // 2.component UI sẽ được render -> callback gọi
+
+// cleanup function
+// 1.dọn dẹp
+// 2.componentWillUnmounted
 function UseEffect(){
     // logic
     const [content,setContent] = useState('')
