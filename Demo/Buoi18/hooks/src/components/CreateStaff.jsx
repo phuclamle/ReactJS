@@ -41,8 +41,10 @@ const cityList = [
 ]
 
 function CreateStaff(){
-    const {register,handleSubmit,formState:{errors},reset} = useForm({
-        resolver: yupResolver(schema)
+    const {register,handleSubmit,formState:{errors},reset, watch} = useForm({
+        resolver: yupResolver(schema),
+        mode: 'onBlur',
+        criteriaMode: 'all'
     })
      
     const handleCreateStaff = (data) =>{
