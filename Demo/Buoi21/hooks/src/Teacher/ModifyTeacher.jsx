@@ -57,6 +57,7 @@ function ModifyTeacher() {
     }, [])
 
     const handleUpdateTeacher = (data) => {
+        console.log(data);
         data.department = JSON.parse(data.department)
         setIsLoading(true)
             fetch(`https://6559689ce93ca47020aa363f.mockapi.io/teacher/${teacherId}`, {
