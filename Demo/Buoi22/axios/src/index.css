@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+body {
+  margin: 0;
+  font-family:'Ubuntu', sans-serif;
+}
+
+.avatar-sm{
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-md{
+  width: 200px;
+  cursor: pointer;
+}
