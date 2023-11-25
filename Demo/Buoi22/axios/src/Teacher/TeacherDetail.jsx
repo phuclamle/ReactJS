@@ -27,7 +27,7 @@ function TeacherDetail() {
                 isLoading ? <p>Loading...</p> : (
                     <div className="row d-flex align-items-center justify-content-center">
                         <div className="col-md-2">
-                            <img src={teacherDetail.avatar} alt=""/>
+                            <img src={teacherDetail.avatar} alt="" className="avatar-md"/>
                         </div>
                         <div className="col-md-10">
                             <div>Fullname: {teacherDetail.name}</div>
