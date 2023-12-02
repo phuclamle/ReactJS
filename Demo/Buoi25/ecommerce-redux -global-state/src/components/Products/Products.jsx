@@ -1,11 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Product from "./Product";
 import { ShoeContext } from "../../context/ShoeContext";
 import Category from "../Sidebar/Category";
+import { getProductList } from "../../reducer/actions";
 
 function Products(){
-    const {state} = useContext(ShoeContext)
+    const {state,dispatch} = useContext(ShoeContext)
      const {productList,filters:{searchText,recommended,category,color,price}} = state
+     useEffect(()=>{
+        async function fetchProductList(){
+            let productListRes = await fetch('https://json-server-api-phuclamle.vercel.app/products')
+            let data = await productListRes.json();
+            console.log(data);
+            dispatch(getProductList(data))
+        }
+        fetchProductList()
+     },[])
     const queryProducts = ()=>{
         let filterProductList = [...productList]
         if(searchText){
@@ -32,7 +42,6 @@ function Products(){
         return filterProductList
     }
     const remainProductList = queryProducts()
-    console.log(state);
     return (
         <div className="py-2 d-flex flex-column justify-content-center">
             <h5>Products</h5>
