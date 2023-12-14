@@ -1,0 +1,311 @@
+
+.nav{
+  position: fixed;
+  z-index: 100;
+  transition:   .5s;
+  transition-timing-function: ease-in;
+}
+.logo {
+  width: 120px;
+  height: 80%;
+}
+
+
+.navSearch {
+  color: white;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  &:hover .iconSearch {
+    color: var(--color-white);
+
+  }
+}
+
+  .iconSearch {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transform: translateX(32px) translateY(1px);
+    color: #bbb;
+  }
+  .iconSearch:hover{
+    color: white;
+  }
+
+  .nav-search input {
+    font-size: 14px;
+    border: none;
+    color:  black;
+    outline: none;
+    background-color: rgb(27, 23, 23,.5);
+    width: 0px;
+    padding: 10px;
+    border: 1px solid #fff;
+    transition: width 0.5s;
+    cursor: pointer;
+    opacity: 0;
+
+   
+  }
+
+  input:focus{
+    border: .5px solid white;
+    color: white;
+      padding-left: 26px;
+      width: 300px;
+      cursor: text;
+      opacity: 1;
+      border-radius: 4px;
+  
+  }
+  .intro{
+    position: relative;
+    padding-top: 53%;
+  }
+
+  .videoIntro{
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+  .InfoIntro{
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    z-index: 1;
+    color: white;
+  }
+.btnVolume {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 10%;
+  top: 50%;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 6px;
+  color: #bbb;
+  border: #fff solid 1px;
+  transition: all 0.3s;
+  transform: scale(1);
+  &:hover {
+    color: #fff;
+    background-color: rgba(211, 211, 211, 0.178);
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+ 
+}
+.fadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(15, 15, 15, 0.6) 40%,
+    rgb(17, 17, 17),
+    rgb(17, 17, 17)
+
+  );
+}
+
+.ContentsSection {
+  background-color: var(--color-background);
+  color: var(--color-white); 
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;    
+}
+.heading{
+  z-index: 1;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: white;
+  font-size: 25px;
+}
+ 
+.MoviesSlider{
+  display: grid;
+  gap: 6px;
+  transition: all 0.3s linear;
+  user-select: none;
+  
+  overflow: hidden;  
+  padding-top: 28px;
+  padding-bottom: 28px;
+  scroll-behavior: smooth;
+}
+.movieItem {
+  cursor: pointer;
+  transform: scale(1);
+  max-width: 320px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 6px;
+  transform: center left;
+}
+.movieItem:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  -webkit-filter: brightness(1) !important;
+  filter: brightness(1) !important;
+}
+.movieItem  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btnLeft {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;    
+  left: 12px;
+  transform: translateY(100%);
+  z-index: 20;
+  transform-origin: center;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.4);
+}
+  .btnLeft svg {
+    opacity: 0.7;
+    font-size: 50px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  .btnLeft:hover svg{
+    color: white;
+  }
+  .btnRight {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;    
+    right: 12px;
+    transform: translateY(100%);
+    z-index: 20;
+    transform-origin: center;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.4);
+  }
+    .btnRight svg {
+      opacity: 0.7;
+      font-size: 50px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .btnRight:hover svg{
+      color: white;
+    }
+
+    .MenusPane{
+      position: fixed;
+      left: 0;
+      top: 20%;
+      width: 46px;
+      padding: 4px 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 100;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform-origin: left center;
+      transition: all 0.3s linear;
+      &:hover {
+        width: 180px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .subMenu {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      margin-left: 2px;
+      padding: 4px 6px;
+      cursor: pointer;
+      .icon {
+        font-size: 30px;
+        margin-right: 8px;
+      }
+      span {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+     
+.show{
+  background-color: rgba(0, 0, 0, .5);
+}
+.modal-content{
+  background-color: black !important;
+}
+.row-detail{
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 60%, transparent)!important;
+}
+.img-info{
+  width: 100%;
+  height: 300px;
+}
+.movie-table>thead>tr>th{
+  background-color:rgb(201,201,201) ;
+  color: black;
+  padding: 10px 5px;
+}
+
+ 
+.sidebar {
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: lightgrey;
+  position: fixed;
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  transition: all .5s;
+}
+.none_sidebar{
+  transform: translateX(-100%);
+}
+.sidebar a{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin: 10px 0px 0px 5px ;
+}
+.sidebar a:hover{
+  font-size: 25px;
+  background-color: rgb(173, 171, 171);
+}
+.navbarManager{
+  background-color: rgb(205,52,156);
+}
